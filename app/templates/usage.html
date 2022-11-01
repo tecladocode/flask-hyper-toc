@@ -1,0 +1,41 @@
+{% from "layouts/side-index.html" import with_side_index %}
+{% from "components/section/section.html" import section %}
+
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="my-40">
+        {% call with_side_index(".section-header") %}
+            {% call section("Description", class_="mb-24 prose") %}
+                <p class="text-2xl font-semibold">This is in the first section.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non elit eget metus porttitor eleifend. In ornare nunc et sem dictum posuere. Pellentesque malesuada, metus quis ultrices convallis, quam lorem pulvinar risus, sit amet egestas nibh magna sed eros. Donec nunc nisl, vestibulum at egestas eu, sodales vel erat. Praesent accumsan erat eros. Nulla condimentum laoreet mi, non finibus tortor pulvinar id. Nulla id sollicitudin metus. Nam rutrum, ex et bibendum laoreet, odio eros ullamcorper enim, sit amet tincidunt felis massa sit amet quam. In nec libero luctus, convallis enim ac, posuere ex. Sed metus metus, fermentum eget congue aliquam, hendrerit consequat ligula. Phasellus elit lorem, ornare et est feugiat, commodo laoreet magna. Donec dictum imperdiet nulla, vel iaculis sapien consectetur eget. Nam vel orci nisl. Cras a augue ligula. Etiam vel magna eu odio ornare tempus. Curabitur libero tortor, tincidunt a gravida dignissim, elementum lacinia nisi.</p>
+
+                <p>Nam malesuada, diam at tristique iaculis, lacus justo accumsan urna, elementum finibus odio dolor eu sem. Nulla eu eros tincidunt orci hendrerit tincidunt. Sed non pellentesque neque. Sed aliquet, purus id vehicula tincidunt, ipsum augue facilisis mi, sit amet pretium purus nibh a lacus. Etiam consequat lectus nec risus ultrices, at hendrerit orci egestas. Quisque a porttitor tortor, id mattis ex. Quisque pellentesque aliquet commodo. Duis pretium lectus hendrerit accumsan tempus. Aliquam ac velit eget nisi cursus varius sed nec tellus. Phasellus convallis diam eu tortor aliquet iaculis. Nam consectetur a elit non posuere.</p>
+            {% endcall %}
+
+            {% call section("Something else", class_="mb-24 prose") %}
+                <p>This is in the second section.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non elit eget metus porttitor eleifend. In ornare nunc et sem dictum posuere. Pellentesque malesuada, metus quis ultrices convallis, quam lorem pulvinar risus, sit amet egestas nibh magna sed eros. Donec nunc nisl, vestibulum at egestas eu, sodales vel erat. Praesent accumsan erat eros. Nulla condimentum laoreet mi, non finibus tortor pulvinar id. Nulla id sollicitudin metus. Nam rutrum, ex et bibendum laoreet, odio eros ullamcorper enim, sit amet tincidunt felis massa sit amet quam. In nec libero luctus, convallis enim ac, posuere ex. Sed metus metus, fermentum eget congue aliquam, hendrerit consequat ligula. Phasellus elit lorem, ornare et est feugiat, commodo laoreet magna. Donec dictum imperdiet nulla, vel iaculis sapien consectetur eget. Nam vel orci nisl. Cras a augue ligula. Etiam vel magna eu odio ornare tempus. Curabitur libero tortor, tincidunt a gravida dignissim, elementum lacinia nisi.</p>
+
+                <p>Nam malesuada, diam at tristique iaculis, lacus justo accumsan urna, elementum finibus odio dolor eu sem. Nulla eu eros tincidunt orci hendrerit tincidunt. Sed non pellentesque neque. Sed aliquet, purus id vehicula tincidunt, ipsum augue facilisis mi, sit amet pretium purus nibh a lacus. Etiam consequat lectus nec risus ultrices, at hendrerit orci egestas. Quisque a porttitor tortor, id mattis ex. Quisque pellentesque aliquet commodo. Duis pretium lectus hendrerit accumsan tempus. Aliquam ac velit eget nisi cursus varius sed nec tellus. Phasellus convallis diam eu tortor aliquet iaculis. Nam consectetur a elit non posuere.</p>
+
+                <p>In quis enim egestas, congue purus ac, malesuada neque. Quisque pharetra posuere sem, quis aliquam lectus fringilla et. In maximus nec ante ut tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus euismod, sem eget facilisis ultrices, leo est fermentum lacus, quis pellentesque orci lacus et tellus. Aliquam vestibulum nisi vel dolor vehicula pulvinar. Nullam mattis non odio a bibendum. Sed sed mi libero. Fusce id diam porta eros porta ullamcorper. Fusce sit amet hendrerit felis. Nullam non leo a magna auctor ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas quis mi id tellus commodo viverra a vel risus.</p>
+
+                <p>Vivamus consequat ante mauris, sit amet interdum velit viverra at. Pellentesque laoreet vestibulum metus, et blandit leo posuere facilisis. Sed vestibulum fermentum rutrum. Etiam tortor ligula, feugiat ut ullamcorper a, euismod non mauris. Sed rutrum malesuada massa, eu condimentum ligula interdum eget. Phasellus in feugiat sapien, nec bibendum lacus. Pellentesque pulvinar sapien velit, et laoreet risus volutpat non. Mauris condimentum, sem in molestie tempor, ex urna porta mauris, ac pretium felis quam vitae est. Fusce non interdum lectus, quis lobortis orci. Vestibulum pulvinar congue diam et pulvinar. Nullam elit sem, pharetra vitae varius id, pellentesque ac quam. Phasellus massa enim, dictum vitae diam eget, sagittis hendrerit lectus. Suspendisse dapibus auctor lectus eu posuere. Mauris tincidunt urna eget commodo consectetur. Nunc varius erat nulla, id iaculis est tristique eget. Aliquam ipsum enim, rhoncus id mollis id, vehicula a risus.</p>
+
+                <p>Phasellus fermentum velit ut lectus posuere blandit. Cras egestas dignissim felis id faucibus. Quisque dapibus eget tellus et laoreet. In erat est, efficitur vel molestie et, aliquet ut enim. Fusce tortor eros, suscipit sed cursus at, posuere sit amet libero. Nam at fermentum nunc. Sed non augue cursus, ullamcorper augue id, tincidunt augue. Nulla vitae sagittis eros. Suspendisse iaculis auctor malesuada. Etiam nisl mi, dictum vel molestie a, tempus at arcu. Donec nec pretium nibh. Nam a neque nec nisi tempor hendrerit. Duis porta et mi id lobortis. Cras ante nisl, tempor eu elit vitae, pretium malesuada mi.</p>
+            {% endcall %}
+
+            {% call section("A third one", class_="mb-24 prose") %}
+                <p>You can put as many HTML elements as you want.</p>
+                <p>Inside each caller block.</p>
+
+                <p>Vivamus consequat ante mauris, sit amet interdum velit viverra at. Pellentesque laoreet vestibulum metus, et blandit leo posuere facilisis. Sed vestibulum fermentum rutrum. Etiam tortor ligula, feugiat ut ullamcorper a, euismod non mauris. Sed rutrum malesuada massa, eu condimentum ligula interdum eget. Phasellus in feugiat sapien, nec bibendum lacus. Pellentesque pulvinar sapien velit, et laoreet risus volutpat non. Mauris condimentum, sem in molestie tempor, ex urna porta mauris, ac pretium felis quam vitae est. Fusce non interdum lectus, quis lobortis orci. Vestibulum pulvinar congue diam et pulvinar. Nullam elit sem, pharetra vitae varius id, pellentesque ac quam. Phasellus massa enim, dictum vitae diam eget, sagittis hendrerit lectus. Suspendisse dapibus auctor lectus eu posuere. Mauris tincidunt urna eget commodo consectetur. Nunc varius erat nulla, id iaculis est tristique eget. Aliquam ipsum enim, rhoncus id mollis id, vehicula a risus.</p>
+
+                <p>Phasellus fermentum velit ut lectus posuere blandit. Cras egestas dignissim felis id faucibus. Quisque dapibus eget tellus et laoreet. In erat est, efficitur vel molestie et, aliquet ut enim. Fusce tortor eros, suscipit sed cursus at, posuere sit amet libero. Nam at fermentum nunc. Sed non augue cursus, ullamcorper augue id, tincidunt augue. Nulla vitae sagittis eros. Suspendisse iaculis auctor malesuada. Etiam nisl mi, dictum vel molestie a, tempus at arcu. Donec nec pretium nibh. Nam a neque nec nisi tempor hendrerit. Duis porta et mi id lobortis. Cras ante nisl, tempor eu elit vitae, pretium malesuada mi.</p>
+            {% endcall %}
+        {% endcall %}
+    </main>
+{% endblock %}

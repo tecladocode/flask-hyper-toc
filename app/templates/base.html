@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="h-full bg-gray-50" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block meta %}
+  {% endblock %}
+  <title>{% block title %}{{ title|default("Teclado") }}{% endblock %}</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}" />
+  <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
+  {% block head %}
+
+  {% endblock %}
+</head>
+<body class="h-full">
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

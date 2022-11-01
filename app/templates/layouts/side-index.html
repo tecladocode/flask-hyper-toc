@@ -1,0 +1,52 @@
+{% macro with_side_index(target="h1") %}
+    {# This macro uses `caller()` to render children as well as a side index. #}
+    <template id="side-index-link">
+        <a
+            href="#"
+            class="p-0 cursor-pointer flex items-center mb-4 no-underline opacity-50 hover:opacity-100 transition-opacity"
+            _="on showYourself(id) queue all
+                if @href == id then
+                    remove .opacity-50 from me
+                end
+            end
+            on hideYourself(id) queue all
+                if @href == id then
+                    add .opacity-50 to me
+                end
+            end
+            "
+        >
+            <span class="index-tag tabular-nums mr-6"></span>
+            <span class="index-title link-item"></span>
+        </a>
+    </template>
+
+    <div
+        class="lg:grid lg:grid-cols-[1fr_2fr] mx-auto max-w-7xl"
+        id="side-index-layout"
+    >
+        <aside class="hidden lg:block lg:col-start-1 align-middle">
+        <div class="sticky top-20">
+            <div 
+                    _="init
+                        repeat for title in <{{target}}/>
+                            make a <div.index-element /> called item
+                            put the innerHTML of <#side-index-link /> into item
+                            set link to the first <a/> in item
+                            set link.href to '#' + the title's id
+                            set headerTag to the first .header-tag in title
+                            set headerTitle to the first .header-title in title
+                            set indexTag to the first .index-tag in link
+                            set indexTitle to the first .index-title in link
+                            put the headerTitle's textContent into indexTitle's textContent
+                            put the headerTag's textContent into the indexTag's textContent
+                            put item before me
+                        end
+                    end
+                    ">
+                    </div>
+            </div>
+        </aside>
+        <section class="lg:col-start-2">{{ caller() }}</section>
+    </div>
+{% endmacro %}

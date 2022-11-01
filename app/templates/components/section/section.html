@@ -1,0 +1,20 @@
+{% from "components/section/section-header.html" import section_header %}
+
+{% macro section(title, class_="mb-24", section_id="") %}
+    {% set section_id = section_id or title | slug %}
+    <section class="{{ class_ }}" id="{{ section_id }}"
+        _="on intersection(intersecting) having threshold 0.2
+                if intersecting
+                    wait 100ms
+                    send showYourself(id:'#{{ section_id }}') to <a /> in #side-index-layout
+                else
+                    wait 100ms
+                    send hideYourself(id:'#{{ section_id }}') to <a /> in #side-index-layout
+                end
+            end
+        "
+    >
+        {{ section_header(title, section_id) }}
+        {{ caller() }}
+    </section>
+{% endmacro %}
