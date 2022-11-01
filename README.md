@@ -1,8 +1,9 @@
 # Flask Hyper TOC
 
+An implementation of a dynamic table of contents using [Hyperscript](https://hyperscript.org/). Code here made for Flask, but with small modifications it should work with Django or any other library.
+
 https://user-images.githubusercontent.com/3788301/199255762-b3983483-b323-49e2-84aa-d2773e0f8f17.mp4
 
-An implementation of a dynamic table of contents using [Hyperscript](https://hyperscript.org/). Code here made for Flask, but with small modifications it should work with Django or any other library.
 
 ## Getting started
 
