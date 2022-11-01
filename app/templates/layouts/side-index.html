@@ -16,7 +16,6 @@
             end
             "
         >
-            <span class="index-tag tabular-nums mr-6"></span>
             <span class="index-title link-item"></span>
         </a>
     </template>
@@ -34,12 +33,9 @@
                             put the innerHTML of <#side-index-link /> into item
                             set link to the first <a/> in item
                             set link.href to '#' + the title's id
-                            set headerTag to the first .header-tag in title
                             set headerTitle to the first .header-title in title
-                            set indexTag to the first .index-tag in link
                             set indexTitle to the first .index-title in link
                             put the headerTitle's textContent into indexTitle's textContent
-                            put the headerTag's textContent into the indexTag's textContent
                             put item before me
                         end
                     end

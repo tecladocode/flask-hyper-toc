@@ -36,9 +36,9 @@ npx tailwindcss -i ./app/css/style.css -o ./app/static/css/output.css --minify
 
 There are three pre-built components that are used in conjunction to build the page content and the table of contents:
 
-- `with_side_index`, inside `app/templates/layouts/side-index.html`.
-- `section`, inside `app/templates/components/section/section.html`.
-- `section_header`, inside `app/templates/components/section/section-header.html` (you seldom will use this one manually).
+- `with_side_index`, inside [`app/templates/layouts/side-index.html`](app/templates/layouts/side-index.html).
+- `section`, inside [`app/templates/components/section/section.html`](app/templates/components/section/section.html).
+- `section_header`, inside [`app/templates/components/section/section-header.html`](app/templates/components/section/section-header.html) (you seldom will use this one manually).
 
 The `with_side_index` and `section` components are ["Higher-Order Components"](https://jinja.palletsprojects.com/en/3.0.x/templates/#call). This means that you must use them with a `call` block, like so:
 
@@ -69,7 +69,7 @@ Optionally you can pass classes to each section:
 
 ## How the dynamic highlighting works
 
-If you look at `layouts/side-index.html`, you'll see that the `with_side_index` macro takes in one optional argument: `target`:
+If you look at [`layouts/side-index.html`](app/templates/layouts/side-index.html), you'll see that the `with_side_index` macro takes in one optional argument: `target`:
 
 ```jinja
 {% macro with_side_index(target="h1") %}
@@ -87,12 +87,9 @@ Still inside the same file, skip the `template` tag for now, we'll come back to 
             put the innerHTML of <#side-index-link /> into item
             set link to the first <a/> in item
             set link.href to '#' + the title's id
-            set headerTag to the first .header-tag in title
             set headerTitle to the first .header-title in title
-            set indexTag to the first .index-tag in link
             set indexTitle to the first .index-title in link
             put the headerTitle's textContent into indexTitle's textContent
-            put the headerTag's textContent into the indexTag's textContent
             put item before me
         end
     end
@@ -104,7 +101,7 @@ This rather long Hyperscript code is fairly readable (I think!). It iterates ove
 
 ### Links in each target
 
-Each target should have an anchor link, such as `#section-one`. The `components/section/section.html` has an `id` property which can be given as an argument, or it is generated from the heading title using the `python-slugify` library.
+Each target should have an anchor link, such as `#section-one`. The [`components/section/section.html`](app/templates/components/section/section.html) has an `id` property which can be given as an argument, or it is generated from the heading title using the `python-slugify` library.
 
 ## Highligting the ToC items in view
 
@@ -155,7 +152,6 @@ This looks at the `showYourself` and `hideYourself` events, and adds or removes 
         end
         "
     >
-        <span class="index-tag tabular-nums mr-6"></span>
         <span class="index-title link-item"></span>
     </a>
 </template>
